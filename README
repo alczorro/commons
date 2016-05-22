@@ -1,0 +1,30 @@
+duckling-common
+===============
+
+Before building, you need install the local jars into your maven's
+local repository by 'install-dep.sh'.
+
+Packages in this project
+------------------------
+
+src/main
+└── java
+    └── cn
+        └── vlabs
+            ├── commons
+            │   ├── cache
+            │   ├── config
+            │   ├── credential
+            │   ├── principal
+            │   ├── umt
+            │   └── xml
+            └── duckling
+                └── common
+                    ├── crypto
+                    │   └── impl
+                    ├── http
+                    ├── properties
+                    ├── transmission
+                    └── util
+
+

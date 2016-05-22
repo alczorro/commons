@@ -1,0 +1,46 @@
+package cn.vlabs.commons.config;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class PropertiesReaderTest {
+	PropertiesReader prop;
+	@Before
+	public void setUp() throws Exception {
+		prop = new PropertiesReader();
+		FileInputStream in = new FileInputStream("test/cn/vlabs/commons/config/clbconfig.properties");
+		prop.load(in);
+		in.close();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		prop = null;
+	}
+
+	@Test
+	public void testGetInt() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetBoolean() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetProperty() throws IOException {
+		assertEquals("localhost:3306", prop.getProperty("database.ip"));
+		assertEquals("http://localhost/umt/sso/ssoreq.jsp",prop.getProperty("signon.server.url"));
+		assertEquals("jdbc:mysql://localhost:3306/testdata?useUnicode=true&characterEncoding=UTF-8",prop.getProperty("Database.jdbcurl"));
+		prop.storeToXML(System.out, "ABC");
+	}
+
+}
