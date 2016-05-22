@@ -1,6 +1,10 @@
 duckling-common
 ===============
 
+WARNING: This source codes are not complete as the latest version. 
+Just use the binary file 'duckling-common-6.0.6'.jar for the time
+being.
+
 Before building, you need install the local jars into your maven's
 local repository by 'install-dep.sh'.
 
